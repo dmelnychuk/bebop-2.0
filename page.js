@@ -5,7 +5,7 @@ const getImage = require('./image');
 let oneTimeURL = 'https://cointelegraph.com/news/ethereum-developers-target-march-2023-for-shanghai-hard-fork'
 let readyPost
 
-async function start(oneTimeURL){
+async function getPage(oneTimeURL){
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page.goto(oneTimeURL)
@@ -24,7 +24,7 @@ async function start(oneTimeURL){
 
 readyPost = posts.join();
 
- console.log(readyPost);
+ //console.log(readyPost);
 
 
     await browser.close()
@@ -33,11 +33,13 @@ return readyPost;
 
 }
 
+module.exports = getPage;
+
 ///tested running function with translate function, connected from separate module.
 
-start(oneTimeURL)
-//.then (res => {translate(res)})
-.then (oneTimeURL =>{getImage(oneTimeURL)})
+// getPage(oneTimeURL)
+// .then (res => {translate(res)})
+// getImage(oneTimeURL)
 //.then(log => console.log(oneTimeURL))
 
 

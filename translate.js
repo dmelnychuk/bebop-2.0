@@ -55,7 +55,7 @@ function translate(postText) {
 
   req.end();
 
-/// need to return value which can be used for further actions.
+/// returns value which can be used for further actions.
 
 }
 

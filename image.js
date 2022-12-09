@@ -47,6 +47,6 @@ fs.writeFile("coinimage.jpg", await viewImage.buffer(), function (err) {
 }
 
 
-getImage("https://cointelegraph.com/news/us-lawmakers-question-federal-regulators-on-banks-ties-to-crypto-firms")
+//getImage("https://cointelegraph.com/news/us-lawmakers-question-federal-regulators-on-banks-ties-to-crypto-firms")
 
 module.exports = getImage;
