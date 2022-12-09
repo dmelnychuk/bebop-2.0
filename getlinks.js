@@ -2,7 +2,7 @@ const puppeteer = require ('puppeteer');
 const fs = require('fs/promises');
 
 
-async function start(){
+async function getLinks(){
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page.goto('https://cointelegraph.com')
@@ -54,8 +54,8 @@ async function start(){
 
 }
 
-start()
+//getLinks()
 
-
+module.exports = getLinks;
 
    
