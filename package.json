@@ -1,0 +1,22 @@
+{
+  "name": "bebop-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/live7374/bebop-2.0.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/live7374/bebop-2.0/issues"
+  },
+  "homepage": "https://github.com/live7374/bebop-2.0#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
