@@ -10,8 +10,9 @@ let oneTimeURL = ('https://cointelegraph.com/news/ethereum-developers-target-mar
 
 
 
-getLinks()
+let links = getLinks()
 
-getPage(oneTimeURL)
-.then (res => {translate(res)})
-getImage(oneTimeURL)
+
+//getPage(oneTimeURL)
+//.then (res => {translate(res)})
+//getImage(oneTimeURL)

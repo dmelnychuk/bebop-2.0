@@ -40,9 +40,10 @@ async function getLinks(){
  const uniqueLinks = [...new Set(iterLinks)]
  
  // Print all the files.
- console.log(links.join('\n'));
- console.log(typeof(links));
- console.log(uniqueLinks);
+//  console.log(links.join('\n'));
+//  console.log(typeof(links));
+//  console.log(uniqueLinks);
+
 //  await fs.writeFile("links.txt", links.join("\r\n"))
 
 // await page.goto('')
@@ -50,11 +51,19 @@ async function getLinks(){
 
 //----------------------------------------------------------------
 
+
     await browser.close()
 
+    return uniqueLinks
 }
 
-//getLinks()
+
+getLinks()
+.then (links => {
+  links.forEach(ulink => {console.log(ulink)}) //looping through each element of received array of URLs
+})
+
+
 
 module.exports = getLinks;
 
