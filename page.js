@@ -36,8 +36,8 @@ return readyPost;
 ///tested running function with translate function, connected from separate module.
 
 start(oneTimeURL)
-.then (res => {translate(res)})
-//.then (oneTimeURL =>{getImage('https://cointelegraph.com/news/ethereum-developers-target-march-2023-for-shanghai-hard-fork')})
+//.then (res => {translate(res)})
+.then (oneTimeURL =>{getImage(oneTimeURL)})
 //.then(log => console.log(oneTimeURL))
 
 
