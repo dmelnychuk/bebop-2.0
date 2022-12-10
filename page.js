@@ -25,6 +25,7 @@ async function getPage(oneTimeURL){
 readyPost = posts.join();
 
  //console.log(readyPost);
+ //console.log("<-------------------------------------------->")
 
 
     await browser.close()
@@ -37,7 +38,9 @@ module.exports = getPage;
 
 ///tested running function with translate function, connected from separate module.
 
+// oneTimeURL = "https://cointelegraph.com/news/nfts-could-help-solve-diamond-certification-fraud"
 // getPage(oneTimeURL)
+
 // .then (res => {translate(res)})
 // getImage(oneTimeURL)
 //.then(log => console.log(oneTimeURL))
