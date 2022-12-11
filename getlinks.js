@@ -3,6 +3,7 @@ const fs = require('fs/promises');
 
 
 async function getLinks(){
+  console.log('Extracting links...')
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page.goto('https://cointelegraph.com')
@@ -54,6 +55,7 @@ async function getLinks(){
 
 
     await browser.close()
+    console.log(`Links extracted: ${uniqueLinks.length} `)
 
     return uniqueLinks
 }

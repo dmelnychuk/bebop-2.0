@@ -2,6 +2,7 @@ var https = require("follow-redirects").https;
 var fs = require("fs");
 
 function translate(postText) {
+  console.log (`Page translation started...`)
   // let postText = "I have never been to London, Rome, «Paris»"
   var options = {
     method: "POST",
@@ -32,8 +33,14 @@ function translate(postText) {
 
       // defining exact element that we want to get from array of arrays
       var splitPost = receivedPost.data[0].translated;
+      console.log (`Page translation finished`)
+      /// returns value which can be used for further actions.
+      return splitPost
 
-      console.log(splitPost);
+
+
+
+//      console.log(splitPost);
     });
 
     res.on("error", function (error) {
@@ -55,7 +62,6 @@ function translate(postText) {
 
   req.end();
 
-/// returns value which can be used for further actions.
 
 }
 
