@@ -33,6 +33,7 @@ function translate(postText) {
 
       // defining exact element that we want to get from array of arrays
       var splitPost = receivedPost.data[0].translated;
+      console.log(splitPost);
       console.log (`Page translation finished`)
       /// returns value which can be used for further actions.
       return splitPost

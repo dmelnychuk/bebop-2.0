@@ -8,16 +8,29 @@ let oneTimeURL = 'https://cointelegraph.com/news/gamestop-to-drop-crypto-efforts
 let readyPost
 let TN = (`My test result`)
 let resArray = []
+let postText = "My best Post text"
+let article = []
+const app = express() 
+const cors = require('cors')
+app.use(cors())
 
-
+//translate(postText)
+//getPage(oneTimeURL)
 getLinks()
 .then (ulinks => {
     for (let i = 0; i < 3; i++) {
         getPage(ulinks[i]) // returns article per each URL
-        .then (res => {translate(res)})// translate each article
-        console.log(resArray)
+        .then (res => {article.push({res})})
+        .then (res => {
+          app.get('/results', (request, result) => {result.json(article)})
+          
+        })
+        //.then (res => {console.log(resArray)})
+        //.then (res => {console.log(res)})// translate each article
     }
 })
+
+app.listen(port, () => {console.log(`Server has started on port: ${port}`)})
 
 
 //<------URL Extracting ---->
@@ -79,7 +92,7 @@ async function getPage(oneTimeURL){
   }
 
 //<!----Translation---->
-function translate(postText) {
+ function translate(postText) {
   console.log (`Page translation started...`)
   var options = {
     method: "POST",
@@ -107,9 +120,10 @@ function translate(postText) {
       var splitPost = receivedPost.data[0].translated;
       console.log (`Page translation finished`)
 
-      resArray.push(splitPost)
+      // resArray.push(splitPost)
+      // console.log(resArray)
       /// returns value which can be used for further actions.
-      return splitPost
+
      
 
     });
@@ -132,6 +146,8 @@ function translate(postText) {
   req.write(postData);
 
   req.end();
+  
+  return splitPost
 
 }
 

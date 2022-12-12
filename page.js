@@ -28,6 +28,7 @@ readyPost = posts.join();
     await browser.close()
 
 console.log(`Page [ ${oneTimeURL} ] Processing finished!`)
+//console.log(readyPost)
 
 return readyPost;
 
@@ -39,7 +40,7 @@ module.exports = getPage;
 ///tested running function with translate function, connected from separate module.
 
 // oneTimeURL = "https://cointelegraph.com/news/nfts-could-help-solve-diamond-certification-fraud"
-//  getPage(oneTimeURL)
+// getPage(oneTimeURL)
 
 // .then (res => {translate(res)})
 // getImage(oneTimeURL)

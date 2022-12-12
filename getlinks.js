@@ -58,10 +58,11 @@ async function getLinks(){
     console.log(`Links extracted: ${uniqueLinks.length} `)
 
     return uniqueLinks
+
 }
 
 
-//  getLinks()
+ // getLinks()
 // .then (links => {
 //   links.forEach(ulink => {console.log(ulink)}) //looping through each element of received array of URLs
 // })
@@ -70,4 +71,3 @@ async function getLinks(){
 
 module.exports = getLinks;
 
-   
